@@ -3,5 +3,5 @@ data/silver/
 data/gold/
 *.duckdb
 __pycache__/
-.venv/
+venv/
 .ipynb_checkpoints/
