@@ -2,6 +2,23 @@ data/bronze/
 data/silver/
 data/gold/
 *.duckdb
-__pycache__/
 venv/
 .ipynb_checkpoints/
+!data/raw/.gitkeep
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep 
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
