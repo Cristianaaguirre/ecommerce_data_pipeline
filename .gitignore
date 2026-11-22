@@ -1,13 +1,20 @@
-data/bronze/
-data/silver/
-data/gold/
+# Datos generados (se reconstruyen con el pipeline)
+data/bronze/*
+data/silver/*
+data/gold/*
 *.duckdb
-venv/
-.ipynb_checkpoints/
-!data/raw/.gitkeep
+
+# Excepciones: mantener las carpetas en el repo
 !data/bronze/.gitkeep
 !data/silver/.gitkeep
-!data/gold/.gitkeep 
+!data/gold/.gitkeep
+
+# Entorno virtual
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
 
 # Python
 __pycache__/
