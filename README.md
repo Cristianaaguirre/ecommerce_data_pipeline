@@ -47,8 +47,8 @@ Python · DuckDB · SQL · Parquet · pytest · Streamlit
 ## Progreso
 
 - [x] Exploración de los datos
-- [ ] Estructura del repo
-- [ ] Bronze
+- [x] Estructura del repo
+- [x] Bronze
 - [ ] Silver
 - [ ] Gold
 - [ ] Tests de calidad
