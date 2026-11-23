@@ -9,9 +9,15 @@ SILVER_DIR = BASE_DIR / "data" / "silver"
 SQL_DIR = BASE_DIR / "sql" / "silver"
 
 TRANSFORMATIONS = (
+    ("categorias", "categorias.sql"),
     ("clientes", "cliente.sql"),
+    ("empleados", "empleados.sql"),
+    ("lineas_pedido", "lineas_pedido.sql"),
     ("pedidos", "pedidos.sql"),
     ("productos", "productos.sql"),
+    ("vendedores", "vendedores.sql"),
+    ("ventas_diarias", "ventas_diarias.sql"),
+    ("ventas_mensuales", "ventas_mensuales.sql"),
 )
 
 
@@ -43,7 +49,7 @@ def main() -> None:
             con.execute(
                 f"COPY (SELECT * FROM {silver_view}) "
                 f"TO '{sql_path(silver_path)}' "
-                "(FORMAT PARQUET, COMPRESSION ZSTD)"
+                "(FORMAT PARQUET, COMPRESSION ZSTD, OVERWRITE_OR_IGNORE TRUE)"
             )
     except Exception as error:
         raise RuntimeError(f"Falló la transformación de Bronze a Silver: {error}") from error
