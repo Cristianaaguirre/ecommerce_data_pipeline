@@ -2,6 +2,7 @@
 data/bronze/*
 data/silver/*
 data/gold/*
+data/quarantine/*
 *.duckdb
 
 # Excepciones: mantener las carpetas en el repo
